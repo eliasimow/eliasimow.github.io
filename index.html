@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Eli Asimow — Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav class="nav">
-  <a href="index.html">Projects</a>
-  <a href="about.html">About</a>
-  <a href="fun.html">Side Quests</a>
-  <a href="resume.html">Resume</a>
-</nav>
+<div class="layout">
 
-<header class="hero">
-  <h1>Eli Asimow</h1>
-  <p>Graphics programmer · game dev · rendering nerd</p>
-</header>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h1>Your Name</h1>
 
-<main class="projects-grid">
+    <nav>
+      <a class="active" href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Side Stuff</a>
+      <a href="#">Resume</a>
+    </nav>
 
-<a class="project-card" href="https://github.com/eliasimow/GLTF-Animation-Path-Tracer" target="_blank">
-  <div class="thumb">
-    <img class="thumb-static" src="assets/thumbs/pathtrace.png" alt="Path Tracer">
-    <img class="thumb-gif" src="assets/thumbs/pathtrace.gif" alt="">
+    <div class="sidebar-links">
+      <a href="mailto:you@email.com">you@email.com</a>
+      <a href="https://github.com/yourname" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="projects">
+
+<a class="project-card"
+   href="https://github.com/eliasimow/GLTF-Animation-Path-Tracer"
+   target="_blank"
+   style="--thumb-pos: center 15%;">
+  <img src="assets/thumbs/pathtrace.png"
+       data-gif="assets/thumbs/pathtrace.gif"
+       alt="">
+  <div class="overlay">
+    <h2>Animated CUDA Path Tracer</h2>
+    <p>GLTF animation rendering with bounding volume hierarchy and OPTIX denoising optimizations</p>
   </div>
-  <h3>Path Tracer</h3>
-  <p>GLTF animation path tracer with bounding volume hierarchy and OPTIX denoising optimizations.</p>
 </a>
 
+      <a class="project-card" href="https://github.com/yourname/project2" target="_blank">
+        <img src="images/project2.jpg" data-gif="images/project2.gif" alt="">
+        <div class="overlay">
+          <h2>Poopoo peepee</h2>
+          <p>im nasty at ping pong im nasty at ping pong</p>
+        </div>
+      </a>
 
-  <a class="project-card" href="https://github.com/eliasimow/project2" target="_blank">
-    <img src="assets/thumbs/project2.png" alt="Project 2">
-    <h3>God Rays</h3>
-    <p>Screen-space volumetric light scattering in DirectX 12.</p>
-  </a>
+      <a class="project-card" href="https://github.com/yourname/project3" target="_blank">
+        <img src="images/project3.jpg" data-gif="images/project3.gif" alt="">
+        <div class="overlay">
+          <h2>AHH!! AHH! Oh GOD!</h2>
+          <p>No!!!</p>
+        </div>
+      </a>
 
-</main>
+    </div>
+  </main>
+
+</div>
+
+<script>
+document.querySelectorAll(".project-card").forEach(card => {
+  const img = card.querySelector("img");
+  const still = img.src;
+  const gif = img.dataset.gif;
+
+  card.addEventListener("mouseenter", () => {
+    img.src = gif;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    img.src = still;
+  });
+});
+</script>
 
 </body>
 </html>
