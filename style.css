@@ -121,6 +121,24 @@ body {
   color: #ccc;
 }
 
+.project-card .overlay h2,
+.project-card .overlay p {
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.project-card:hover .overlay h2 {
+  color: var(--accent);
+}
+
+.project-card:hover .overlay p {
+  color: var(--fg);
+}
+
+.project-card:hover .overlay h2 {
+  text-shadow: 0 0 22px rgba(94, 234, 212, 0.55);
+}
+
+
 /* ===== Responsive ===== */
 
 @media (max-width: 900px) {
