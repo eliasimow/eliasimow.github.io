@@ -285,10 +285,13 @@ body {
 
 .side-entry.split.reverse .side-text {
   grid-column: 2;
+  grid-row: 1;
 }
 
 .side-entry.split.reverse .side-photos {
   grid-column: 1;
+  grid-row: 1;
+  margin-top: 0; /* remove this */
 }
 
 .side-entry.split {
@@ -297,10 +300,11 @@ body {
 }
 
 .side-entry.split.reverse .side-photos {
-  margin-top: -20rem;
+  margin-top: 1rem;
 }
 
 .photo-zoom-out {
   object-fit: contain;
   background: #111; /* fills letterboxing nicely */
 }
+
