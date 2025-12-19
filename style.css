@@ -158,3 +158,149 @@ body {
     height: 220px;
   }
 }
+/* ===== Sidequests ===== */
+
+.sidequests {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.side-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.side-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+.side-card p {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.photo-strip img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #111;
+}
+
+.photo-strip img:hover {
+  transform: scale(1.05);
+}
+
+.side-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.side-link:hover {
+  text-decoration: underline;
+}
+
+
+.side-entry.split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+.side-text h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+}
+
+.side-text p {
+  max-width: 70ch;
+  line-height: 1.6;
+  color: var(--fg);
+}
+
+.side-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.side-photos img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.side-photos .photo-wide {
+  grid-column: 1 / -1;
+  height: 240px;
+}
+
+.side-photos img {
+  transition: transform 0.2s ease;
+}
+
+.side-photos img:hover {
+  transform: scale(1.03);
+}
+
+
+.side-photos img {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+@media (max-width: 900px) {
+  .side-entry.split {
+    grid-template-columns: 1fr;
+  }
+
+  .side-photos {
+    order: -1; /* photos first on mobile */
+  }
+}
+
+.side-entry.split.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.side-entry.split.reverse .side-text {
+  grid-column: 2;
+}
+
+.side-entry.split.reverse .side-photos {
+  grid-column: 1;
+}
+
+.side-entry.split {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #222;
+}
+
+.side-entry.split.reverse .side-photos {
+  margin-top: -40rem;
+}
+
+.photo-zoom-out {
+  object-fit: contain;
+  background: #111; /* fills letterboxing nicely */
+}

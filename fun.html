@@ -1,30 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Side Quests</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Eli Asimow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav class="nav">
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h1>Eli Asimow</h1>
+
+<nav>
   <a href="index.html">Projects</a>
-  <a href="about.html">About</a>
-  <a href="fun.html">Side Quests</a>
-  <a href="resume.html">Resume</a>
+  <a class="active" href="side.html">Side Quests</a>
+  <a href="assets/CGGT_2025.pdf"
+     target="_blank"
+     rel="noopener">
+     Resume
+  </a>
 </nav>
 
-<main class="page">
-  <h1>Side Quests</h1>
-  <p>Experiments, jokes, and things I probably shouldn’t ship.</p>
 
-  <ul>
-    <li>ASCII raytracer</li>
-    <li>Physics engine written at 3am</li>
-    <li>Shaders that only work on my GPU</li>
-  </ul>
-</main>
+    <div class="sidebar-links">
+      <a href="mailto:eliasimow@gmail.com">eliasimow@gmail.com</a>
+      <a href="https://github.com/eliasimow" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/eli-asimow" target="_blank">LinkedIn</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="hero">
+      <h1>Side Quests</h1>
+      <p>Some of my fun creative projects from the last year, not neccessarily graphics related.</p>
+    </header>
+
+<section class="sidequests">
+
+  <!-- Murder Mystery -->
+  <section class="side-entry split">
+    <article class="side-text">
+      <h2>Cousin Murder Mayhem</h2>
+
+      <p>
+        I have many, many cousins. One of our traditions built up over years of reunions is games of Mafia, Werewolf, Avalon, Secret Hitler, etc. After leaving Veeva in 2024, but before beginning my graduate studies, I had a rare surplus of free time. I recruited some cousin and sibling help, and together we wrote a tailored murder mystery for our family, in honor of that tradition.
+      </p>
+
+      <p>
+        We made a custom puzzle, and scattered its pieces around the house. We had movie posters, a corrupt political campaign, a drunk axe man. My brother and I programmed custom PICO-8 games, filled with riddles and hidden on USB sticks. In the end, my cousin shot me dead with a cap gun, and I spilled fake blood all over myself and the carpet. Worth it!
+      </p>
+    </article>
+
+    <div class="side-photos">
+      <img class="photo-wide photo-zoom-out" src="assets/murderParty1.png" alt="">
+      <img src="assets/murderParty2.jpg" alt="">
+      <img src="assets/murderParty3.gif" alt="">
+    </div>
+  </section>
+
+  <!-- Plant Clock (REVERSED) -->
+  <section class="side-entry split reverse">
+    <article class="side-text">
+      <h2>Plant Clock (Evil)</h2>
+      <p>
+       This was for a product pitching class. At first, I didn't have any good ideas. We used an anonymous voting site for initial pitches, and my practical products kept coming in last. I gave up, and pitched something really silly. It's a clock for people that just can't get up in the morning. The clock is in the shape of a pot. You can put your favorite plant in it. When the alarm goes off in the morning, you have two minutes to get up. 
+      </p>
+      <p>
+        If you don't, or if you press the snooze button, it chops your plant in half. 
+        I pitched the idea as a joke, but then the class actually voted for it. 
+        For two months of pitches, I presented and hoped to be eliminated. 
+        But again and again the class voted for it. 
+        That put me past the point of no return; I actually had to make the damn thing. 
+        My grade, alongside the three poor saps that were conscripted to my team, depended on it.  
+      </p>
+      <p>
+        We built a custom Arduino board, with code for a clock and a revolving Exacto knife. It plays Pachelbel's Canon for 120 seconds, then swings its knife with a servo motor. Other than the cramped board's tendency to short circuit and melt itself, it actually worked. Not worth it!  
+      </p>
+
+    </article>
+
+    <div class="side-photos">
+      <img class="photo-wide" src="assets/plantClock1.png" alt="">
+      <img src="assets/plantClock2.jpg" alt="">
+      <img src="assets/plantClock3.jpg.png" alt="">
+    </div>
+  </section>
+
+  <!-- itch.io -->
+  <section class="side-entry split">
+    <article class="side-text">
+      <h2>Pico-8 Games</h2>
+      <p>
+The Pico-8 toybox engine is terrible. The screen is limited to 128 × 128 pixels. There’s only 64 KiB of memory. You have a static palette of 16 colors to choose from. It’s really awful. Still, I’ve completed more projects in Pico-8 than in all my other engines combined. There’s something empowering in that limited scope. Whenever I have a free week, I know that’s enough time to explore some silly idea through to completion. How would a mashup of Cookie Clicker and Oregon Trail play out? What about a game where your bullets shoot at you? How hard is it to craft an emotional narrative? I’ve been able to explore all these ideas, and more, thanks to Pico-8.      </p>
+
+      <a class="side-link" href="https://easimow.itch.io/" target="_blank">
+        View on itch.io →
+      </a>
+    </article>
+
+    <div class="side-photos">
+      <img class="photo-wide" src="assets/pico1.png" alt="">
+      <img src="assets/pico2.gif" alt="">
+      <img src="assets/pico3.png" alt="">
+    </div>
+  </section>
+  </main>
 
 </body>
 </html>
- 
