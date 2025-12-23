@@ -269,16 +269,6 @@ body {
 }
 
 
-@media (max-width: 900px) {
-  .side-entry.split {
-    grid-template-columns: 1fr;
-  }
-
-  .side-photos {
-    order: -1; /* photos first on mobile */
-  }
-}
-
 .side-entry.split.reverse {
   grid-template-columns: 1fr 1.1fr;
 }
@@ -306,5 +296,24 @@ body {
 .photo-zoom-out {
   object-fit: contain;
   background: #111; /* fills letterboxing nicely */
+}
+
+@media (max-width: 900px) {
+  .side-entry.split {
+    grid-template-columns: 1fr;
+  }
+
+  .side-photos {
+    order: -1; /* photos first on mobile */
+  }
+
+  .side-entry.split.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .side-entry.split.reverse .side-text {
+  grid-column: 1;
+  grid-row: 2;
+  }
 }
 
